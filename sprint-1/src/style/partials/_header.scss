@@ -1,0 +1,148 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 169px;
+  background-color: $white;
+  padding: 0 16px;
+
+  &__logo {
+    display: block;
+    height: 48px;
+    padding: 8px 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    // height: 50%;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  &__list-item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+    color: $silver;
+    // border-top: 5px solid $black;
+    // border-bottom: 5px solid $black;
+
+    &-text {
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: normal;
+      font-family: "AvenirNextRegular";
+      font-weight: bold;
+    }
+
+    &--active {
+      color: $white;
+      // border-bottom: 5px solid $white;
+    }
+  }
+
+  &__name-input {
+      @include mob__h4-paragraph;
+      height: 49px;
+      width: 100%;
+      border: 1px solid $mercury;
+      border-radius: 4px;
+      background-color: $alabaster;
+      margin-bottom: 8px;
+      padding-left: 16px;
+      color: $black;
+
+      &::placeholder {
+          color: $black;
+      }
+
+      &:focus {
+          border: 2px solid $black;
+          outline: none;
+      }
+
+  }
+      &__button {
+        @include mob__h4-paragraph;
+        font-family: "AvenirNextDemiBold";
+        width: 224px;
+        height: 48px;
+        border-radius: 4px;
+        background-color: $black;
+        border: none;
+        color: $white;
+
+        &:hover{
+            border: 2px solid $black;
+            background-color: #000000;
+            outline: none;
+        }
+
+        &:focus {
+            border: 2px solid $black;
+            outline: none;
+        }
+
+        &:active {
+            border: 2px solid $black;
+            outline: none;
+        }
+    }
+     &__image {
+    display: flex;
+    height: 38px;
+    width: 38px;
+    // background-color: $mercury;
+    // border: 1px solid $mercury;
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+  &__image--create {
+        // display: block;
+        // margin-top: 20px;
+        width: 48px;
+        height: 48px;
+        // position: absolute;
+        clip-path: rect(0px,200px,200px,0px);
+  }
+}
+
+@include tablet {
+  .header {
+    flex-direction: row;
+    padding: 0 3.125vw;
+    justify-content: flex-start;
+
+    &__logo {
+      display: flex;
+      height: auto;
+      margin-right: 56px;
+    }
+
+    &__list {
+      height: 100%;
+      justify-content: flex-start;
+    }
+
+    &__list-item {
+      @include desk__h2;
+      width: 80px;
+      margin-right: 56px;
+    }
+  }
+}
+
+@include desktop {
+  .header {
+    padding: 0 12.5vw;
+  }
+}
