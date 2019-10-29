@@ -418,6 +418,387 @@
   line-height: 1.14rem;
 }
 
+.comments {
+  padding: 8px 5vw 40px 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.comments__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "AvenirNextDemiBold";
+  margin-bottom: 32px;
+}
+
+.comments__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.comments__post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 24px 0;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.comments__post-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.comments__post--create {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 0px;
+  padding-bottom: 32px;
+}
+
+.comments__image-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 54px;
+}
+
+.comments__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.comments__image--create {
+  margin-top: 20px;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  -webkit-clip-path: rect(0px, 200px, 200px, 0px);
+          clip-path: rect(0px, 200px, 200px, 0px);
+}
+
+.comments__text-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 234px;
+}
+
+.comments__text-box--create {
+  width: 224px;
+}
+
+.comments__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.comments__name {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "AvenirNextDemiBold";
+}
+
+.comments__name--create {
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "AvenirNextRegular";
+  color: #afafaf;
+  font-family: "AvenirNextDemiBold";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.comments__name-input {
+  font-family: "AvenirNextRegular";
+  font-size: 13px;
+  line-height: 18px;
+  height: 48px;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  background-color: #fafafa;
+  margin-bottom: 24px;
+  padding-left: 16px;
+  color: #323232;
+}
+
+.comments__name-input::-webkit-input-placeholder {
+  color: #323232;
+}
+
+.comments__name-input:-ms-input-placeholder {
+  color: #323232;
+}
+
+.comments__name-input::-ms-input-placeholder {
+  color: #323232;
+}
+
+.comments__name-input::placeholder {
+  color: #323232;
+}
+
+.comments__name-input:focus {
+  border: 2px solid #323232;
+  outline: none;
+}
+
+.comments__date {
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "AvenirNextRegular";
+  color: #afafaf;
+}
+
+.comments__comment {
+  font-family: "AvenirNextRegular";
+  font-family: "AvenirNextRegular";
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.comments__comment--create {
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "AvenirNextRegular";
+  color: #afafaf;
+  font-family: "AvenirNextDemiBold";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.comments__comment-input {
+  font-family: "AvenirNextRegular";
+  font-size: 13px;
+  line-height: 18px;
+  height: 96px;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  background-color: #fafafa;
+  margin-bottom: 24px;
+  padding-left: 16px;
+  padding-top: 16px;
+  color: #323232;
+}
+
+.comments__comment-input::-webkit-input-placeholder {
+  color: #323232;
+}
+
+.comments__comment-input:-ms-input-placeholder {
+  color: #323232;
+}
+
+.comments__comment-input::-ms-input-placeholder {
+  color: #323232;
+}
+
+.comments__comment-input::placeholder {
+  color: #323232;
+}
+
+.comments__comment-input:focus {
+  border: 2px solid #0095ff;
+  outline: none;
+}
+
+.comments__button {
+  font-family: "AvenirNextRegular";
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "AvenirNextDemiBold";
+  height: 48px;
+  border-radius: 4px;
+  background-color: #0095ff;
+  border: none;
+  color: #ffffff;
+}
+
+.comments__button:hover {
+  border: 2px solid #323232;
+  background-color: #000000;
+  outline: none;
+}
+
+.comments__button:focus {
+  border: 2px solid #323232;
+  outline: none;
+}
+
+.comments__button:active {
+  border: 2px solid #323232;
+  outline: none;
+}
+
+.comments__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 16px;
+}
+
+.comments__like-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.comments__delete {
+  border: 1px solid #e1e1e1;
+  color: #323232;
+  border-radius: 2px;
+  background-color: #ffffff;
+}
+
+.comments__delete:hover {
+  border-color: #323232;
+  background-color: #323232;
+  color: #ffffff;
+  outline: none;
+}
+
+.comments__like {
+  border: none;
+  color: #afafaf;
+  background-color: #ffffff;
+}
+
+.comments__like:hover {
+  color: #323232;
+}
+
+.comments__like-value {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "AvenirNextDemiBold";
+}
+
+@media only screen and (min-width: 768px) {
+  .conversation {
+    padding: 48px 3.125vw 40px 3.125vw;
+  }
+  .conversation__title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .conversation__container {
+    padding: 0 100px;
+  }
+  .conversation__image-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 60px;
+  }
+  .conversation__image-box--create {
+    width: 68px;
+  }
+  .conversation__text-box {
+    width: 470px;
+  }
+  .conversation__text-box--create {
+    width: 462px;
+  }
+  .conversation__header {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .conversation__name {
+    margin-right: 8px;
+  }
+  .conversation__name--create {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .conversation__name-input {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .conversation__date {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .conversation__comment--create {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .conversation__comment-input {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .conversation__button {
+    font-size: 14px;
+    line-height: 22px;
+    width: 160px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .conversation {
+    padding: 48px 180px 40px 180px;
+  }
+}
+
 html, body {
   margin: 0;
   padding: 0;
