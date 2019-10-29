@@ -49,7 +49,19 @@
     }
   }
 
-  &__name-input {
+  &__search-container {
+    display: flex;
+    position: relative;
+  }
+
+  &__search-icon {
+    position: absolute;
+    color: $black;
+    top: 12px;
+    left: 12px;
+  }
+
+  &__search-input {
       @include mob__h4-paragraph;
       height: 49px;
       width: 100%;
@@ -57,7 +69,7 @@
       border-radius: 4px;
       background-color: $alabaster;
       margin-bottom: 8px;
-      padding-left: 16px;
+      text-indent: 36px;
       color: $black;
 
       &::placeholder {
@@ -72,28 +84,40 @@
   }
       &__button {
         @include mob__h4-paragraph;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-family: "AvenirNextDemiBold";
+        line-height: 13px;
         width: 224px;
         height: 48px;
         border-radius: 4px;
-        background-color: $black;
+        background-color: $brainflix-blue;
         border: none;
         color: $white;
+        // text-align: center;
+        // text-justify: center;
 
         &:hover{
-            border: 2px solid $black;
-            background-color: #000000;
+            // border: 2px solid $black;
+            background-color: $brainflix-blue-dark;
             outline: none;
         }
 
         &:focus {
-            border: 2px solid $black;
+            // border: 2px solid $black;
             outline: none;
         }
 
         &:active {
-            border: 2px solid $black;
+            // border: 2px solid $black;
             outline: none;
+        }
+
+        &--plus {
+          font-family: "AvenirNextRegular";
+          font-size: 32px;
+          margin-right: 8px;
         }
     }
      &__image {
