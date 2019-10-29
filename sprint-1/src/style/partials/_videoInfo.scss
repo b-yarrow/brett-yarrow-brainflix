@@ -1,0 +1,61 @@
+.videoInfo {
+    &__container {
+        padding: 32px 16px;
+    }
+    &__title {
+        @include mob__h1;
+        font-family: "AvenirNextBold";
+        margin-bottom: 16px;
+    }
+
+    &__firstSubtitle{
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 32px;
+    }
+
+    &__creator {
+        @include mob__h2;
+        font-family: "AvenirNextDemiBold";
+        margin-right: 8px;
+    }
+    &__date {
+        @include mob__h5;
+    }
+
+    &__secondSubtitle{
+        display: flex;
+        // align-items: baseline;
+        padding-bottom: 24px;
+        border-bottom: 1px solid $mercury;
+    }
+
+    &__views,&__likes {
+        &-box {
+            display: flex;
+            align-items: center;
+            margin-right: 24px;
+        }
+        &-icon {
+            margin-right: 8px;
+        }
+        &-value {
+            font-family: "AvenirNextRegular";
+            font-size: 13px;
+            line-height: 13px;
+        }
+    }
+
+    &__description {
+        &-box {
+            display: flex;
+            align-items: center;
+            padding-top: 24px;
+        }
+        &-text {
+            font-family: "AvenirNextRegular";
+            font-size: 0.76rem;
+            line-height: 1.14rem;
+        }
+    }
+}

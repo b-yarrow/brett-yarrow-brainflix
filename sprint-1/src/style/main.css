@@ -338,6 +338,86 @@
   opacity: 0.95;
 }
 
+.videoInfo__container {
+  padding: 32px 16px;
+}
+
+.videoInfo__title {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: "AvenirNextBold";
+  font-family: "AvenirNextBold";
+  margin-bottom: 16px;
+}
+
+.videoInfo__firstSubtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-bottom: 32px;
+}
+
+.videoInfo__creator {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "AvenirNextDemiBold";
+  margin-right: 8px;
+}
+
+.videoInfo__date {
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "AvenirNextRegular";
+  color: #afafaf;
+}
+
+.videoInfo__secondSubtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.videoInfo__views-box, .videoInfo__likes-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 24px;
+}
+
+.videoInfo__views-icon, .videoInfo__likes-icon {
+  margin-right: 8px;
+}
+
+.videoInfo__views-value, .videoInfo__likes-value {
+  font-family: "AvenirNextRegular";
+  font-size: 13px;
+  line-height: 13px;
+}
+
+.videoInfo__description-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 24px;
+}
+
+.videoInfo__description-text {
+  font-family: "AvenirNextRegular";
+  font-size: 0.76rem;
+  line-height: 1.14rem;
+}
+
 html, body {
   margin: 0;
   padding: 0;
