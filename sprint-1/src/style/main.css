@@ -235,6 +235,16 @@
   position: relative;
 }
 
+.video__buttons-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  padding: 0 16px;
+  bottom: 8px;
+  width: 100%;
+}
+
 .video__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -242,9 +252,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: absolute;
-  padding: 0 16px;
-  bottom: 8px;
+  width: 100%;
 }
 
 .video__play-button {
@@ -275,7 +283,10 @@
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #323232;
-  width: 200px;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  margin: 0 8px;
   height: 36px;
   border-radius: 4px;
   opacity: 0.5;
@@ -317,11 +328,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   background-color: #323232;
-  width: 52px;
+  width: 90px;
   height: 36px;
   border-radius: 4px;
   opacity: 0.95;

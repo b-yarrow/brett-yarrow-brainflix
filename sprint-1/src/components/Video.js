@@ -12,16 +12,18 @@ export default function Video() {
                 <video width="320" height="183" poster={vidPoster}>
                     <source src={vidFile} type="video/mp4"></source>
                 </video>
-                <div className="video__buttons">
-                    <div className="video__play-button">
-                        <img src={playButton} />
-                    </div>
-                    <div className="video__scrubber">
-                        <progress className="video__progBar" value={0} max={100}></progress>
-                    </div>
-                    <div className="video__fs-vol">
-                        <img src={fullscreen} />
-                        <img src={volume} />
+                <div className="video__buttons-box">
+                    <div className="video__buttons">
+                        <div className="video__play-button">
+                            <img src={playButton} />
+                        </div>
+                        <div className="video__scrubber">
+                            <progress className="video__progBar" value={0} max={100}></progress>
+                        </div>
+                        <div className="video__fs-vol">
+                            <img src={fullscreen} />
+                            <img src={volume} />
+                        </div>
                     </div>
                 </div>
             </div>
