@@ -152,3 +152,59 @@
     }
 }
 }
+
+@include desktop {
+    .video {
+    &__player-box {
+        justify-content: center;
+        background-color: #000000;
+        padding: 0 248px;
+    }
+
+    &__element {
+        width: 944px;
+    }
+
+    &__buttons-box {
+        padding: 0 264px;
+        bottom: 16px;
+        
+    }
+        
+    &__buttons {
+        
+    }
+    &__play-button {
+        
+    }
+
+    &__scrubber {
+        margin: 0 16px;
+        justify-content: space-between;
+    }
+
+    &__progBar {
+        
+        width: 80%;
+
+        &::-webkit-progress-bar {
+            
+        }
+
+        &::-webkit-progress-value {
+            
+        }
+    }
+    &__time {
+        @include desk__h5;
+        display: flex;
+        color: $white;
+        width: auto;
+        margin-right: 16px;
+    }
+
+    &__fs-vol {
+        
+    }
+}
+}
