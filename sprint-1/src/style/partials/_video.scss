@@ -81,6 +81,10 @@
             // opacity: 1.0;
         }
     }
+    &__time {
+        display: none;
+    }
+
     &__fs-vol {
         display: flex;
         align-items: center;
@@ -91,4 +95,60 @@
         border-radius: 4px;
         opacity: 0.95;
     }
+}
+
+@include tablet {
+    .video {
+    &__player-box {
+        justify-content: center;
+        background-color: #000000;
+        padding: 0 34px;
+    }
+
+    &__element {
+        width: 700px;
+    }
+
+    &__buttons-box {
+        padding: 0 42px;
+        bottom: 16px;
+        
+    }
+        
+    &__buttons {
+        
+    }
+    &__play-button {
+        
+    }
+
+    &__scrubber {
+        margin: 0 16px;
+        justify-content: space-between;
+    }
+
+    &__progBar {
+        
+        width: 80%;
+
+        &::-webkit-progress-bar {
+            
+        }
+
+        &::-webkit-progress-value {
+            
+        }
+    }
+    &__time {
+        @include desk__h5;
+        display: flex;
+        color: $white;
+        width: auto;
+        margin-right: 16px;
+    }
+
+    &__fs-vol {
+        
+    }
+}
 }

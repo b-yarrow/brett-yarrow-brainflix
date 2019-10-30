@@ -21,6 +21,7 @@ export default function Video(props) {
                         </div>
                         <div className="video__scrubber">
                             <progress className="video__progBar" value={0} max={100}></progress>
+                            <span className="video__time">0:00 / 0:42</span>
                         </div>
                         <div className="video__fs-vol">
                             <img src={icon.fullscreen} />
