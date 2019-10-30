@@ -9,6 +9,10 @@
   // padding: 0 16px;
   padding: 0 5vw;
 
+  &__logo-box {
+    display: flex;
+  }
+
   &__logo {
     display: block;
     height: 48px;
@@ -144,19 +148,25 @@
   .header {
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   height: 80px;
   padding: 0 3.125vw;
+
+  &__logo-box {
+    display: flex;
+  }
 
   &__logo {
     height: auto;
     padding: 0;
-    margin-right: 169px;
   }
 
   &__list {
     flex-direction: row;
+    justify-content: flex-end;
     align-items: center;
     margin-bottom: 0;
+    width: auto;
   }
 
   &__search-container {
