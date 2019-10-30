@@ -18,12 +18,11 @@
   &__list {
     display: flex;
     flex-direction: column;
-    // height: 50%;
     width: 100%;
     margin-bottom: 16px;
   }
 
-  &__list-item {
+  &__upload-section {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -143,27 +142,141 @@
 
 @include tablet {
   .header {
+  flex-direction: row;
+  align-items: center;
+  height: 80px;
+  padding: 0 3.125vw;
+
+  &__logo {
+    height: auto;
+    padding: 0;
+    margin-right: 169px;
+  }
+
+  &__list {
     flex-direction: row;
-    padding: 0 3.125vw;
-    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0;
+  }
 
-    &__logo {
-      display: flex;
-      height: auto;
-      margin-right: 56px;
+  &__search-container {
+    width: 288px;
+  }
+
+  &__search-icon {
+    // no changes
+  }
+
+  &__search-input {
+      @include mob__h4-paragraph;
+      height: 44px;
+      // width: 100%;
+      width: 248px;
+      border: 1px solid $mercury;
+      border-radius: 4px;
+      background-color: $alabaster;
+      margin-bottom: 0;
+      text-indent: 36px;
+      color: $black;
+      margin-right: 24px;
+
+      &::placeholder {
+          color: $black;
+      }
+
+      &:focus {
+          border: 2px solid $brainflix-blue;
+          outline: none;
+      }
+
+  }
+  &__upload-section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    // width: 100%;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+    color: $silver;
+    // border-top: 5px solid $black;
+    // border-bottom: 5px solid $black;
+
+    &-text {
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: normal;
+      font-family: "AvenirNextRegular";
+      font-weight: bold;
     }
 
-    &__list {
-      height: 100%;
-      justify-content: flex-start;
-    }
-
-    &__list-item {
-      @include desk__h2;
-      width: 80px;
-      margin-right: 56px;
+    &--active {
+      color: $white;
+      // border-bottom: 5px solid $white;
     }
   }
+      &__button {
+        @include desk__h4-paragraph;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "AvenirNextDemiBold";
+        line-height: 14px;
+        width: auto;
+        height: 44px;
+        border-radius: 4px;
+        background-color: $brainflix-blue;
+        border: none;
+        color: $white;
+        padding: 0 8px;
+        // text-align: center;
+        // text-justify: center;
+
+        &:hover{
+            // border: 2px solid $black;
+            background-color: $brainflix-blue-dark;
+            outline: none;
+        }
+
+        &:focus {
+            // border: 2px solid $black;
+            outline: none;
+        }
+
+        &:active {
+            // border: 2px solid $black;
+            outline: none;
+        }
+
+        &--plus {
+          margin-right: 8px;
+        }
+
+        &--text {
+          display: flex;
+          font-size: 14px;
+          line-height: 14px;
+          font-family: "AvenirNextRegular";
+          padding-top: 2px;
+  
+        }
+    }
+
+    &__image-box {
+      display: flex;
+      width: 44px;
+    }
+     &__image {
+    display: flex;
+    height: 44px;
+    width: 44px;
+    // background-color: $mercury;
+    // border: 1px solid $mercury;
+    border-radius: 50%;
+    z-index: 2;
+  }
+}
 }
 
 @include desktop {

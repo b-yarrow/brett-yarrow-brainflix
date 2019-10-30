@@ -48,7 +48,7 @@
   margin-bottom: 16px;
 }
 
-.header__list-item {
+.header__upload-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,7 +69,7 @@
   color: #afafaf;
 }
 
-.header__list-item-text {
+.header__upload-section-text {
   font-size: 14px;
   line-height: 22px;
   font-weight: normal;
@@ -77,7 +77,7 @@
   font-weight: bold;
 }
 
-.header__list-item--active {
+.header__upload-section--active {
   color: #ffffff;
 }
 
@@ -195,30 +195,147 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 80px;
     padding: 0 3.125vw;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
   }
   .header__logo {
+    height: auto;
+    padding: 0;
+    margin-right: 169px;
+  }
+  .header__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 0;
+  }
+  .header__search-container {
+    width: 288px;
+  }
+  .header__search-input {
+    font-family: "AvenirNextRegular";
+    font-size: 13px;
+    line-height: 18px;
+    height: 44px;
+    width: 248px;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    background-color: #fafafa;
+    margin-bottom: 0;
+    text-indent: 36px;
+    color: #323232;
+    margin-right: 24px;
+  }
+  .header__search-input::-webkit-input-placeholder {
+    color: #323232;
+  }
+  .header__search-input:-ms-input-placeholder {
+    color: #323232;
+  }
+  .header__search-input::-ms-input-placeholder {
+    color: #323232;
+  }
+  .header__search-input::placeholder {
+    color: #323232;
+  }
+  .header__search-input:focus {
+    border: 2px solid #0095ff;
+    outline: none;
+  }
+  .header__upload-section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: auto;
-    margin-right: 56px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+    color: #afafaf;
   }
-  .header__list {
-    height: 100%;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+  .header__upload-section-text {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: normal;
+    font-family: "AvenirNextRegular";
+    font-weight: bold;
   }
-  .header__list-item {
-    font-family: "AvenirNextBold";
-    font-size: 24px;
-    line-height: 32px;
-    width: 80px;
-    margin-right: 56px;
+  .header__upload-section--active {
+    color: #ffffff;
+  }
+  .header__button {
+    font-size: 14px;
+    line-height: 22px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-family: "AvenirNextDemiBold";
+    line-height: 14px;
+    width: auto;
+    height: 44px;
+    border-radius: 4px;
+    background-color: #0095ff;
+    border: none;
+    color: #ffffff;
+    padding: 0 8px;
+  }
+  .header__button:hover {
+    background-color: #0065ad;
+    outline: none;
+  }
+  .header__button:focus {
+    outline: none;
+  }
+  .header__button:active {
+    outline: none;
+  }
+  .header__button--plus {
+    margin-right: 8px;
+  }
+  .header__button--text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 14px;
+    line-height: 14px;
+    font-family: "AvenirNextRegular";
+    padding-top: 2px;
+  }
+  .header__image-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 44px;
+  }
+  .header__image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    z-index: 2;
   }
 }
 

@@ -14,11 +14,11 @@ export default function Header(props) {
                     <input className="header__search-input" type="search" name="profileName" id="fname"
                         placeholder="Search"></input>
                 </div>
-                <div className="header__list-item">
+                <div className="header__upload-section">
                     <button className="header__button" name="uploadtButton">
-                        <img className="header__button--plus" src={props.upload}></img> UPLOAD
-              </button>
-                    <div className="header__image-box conversation__image-box--create">
+                        <img className="header__button--plus" src={props.upload}></img><span className="header__button--text">UPLOAD</span>
+                    </button>
+                    <div className="header__image-box">
                         <img name="commentImage" className="header__image header__image--create"
                             src={props.profPic} />
                     </div>
