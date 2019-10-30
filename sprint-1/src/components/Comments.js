@@ -6,8 +6,6 @@ const picPath = '../assets/images/'
 
 export default function Comments(props) {
     const comments = props.commentAry.map((comment, index) => {
-        console.log(comment);
-        console.log(comment.name);
         return (
             <div key={index} className="comments__post">
                 <div className="comments__image-box">

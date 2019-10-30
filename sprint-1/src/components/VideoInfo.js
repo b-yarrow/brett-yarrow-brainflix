@@ -2,7 +2,12 @@ import React from 'react'
 import viewsIcon from '../assets/images/icons/SVG/Icon-views.svg'
 import likesIcon from '../assets/images/icons/SVG/Icon-likes.svg'
 
-export default function VideoInfo() {
+export default function VideoInfo(props) {
+    // const data = props.videoList[0].map(dat => {
+    //     console.log(dat);
+    // })
+
+    const video = props.videoList;
     var vid = {
         title: "BMX Rampage: 2018 Highlights",
         creator: "Red Cow",
@@ -15,10 +20,10 @@ export default function VideoInfo() {
 
     return (
         <div className="videoInfo__container">
-            <h1 className="videoInfo__title">{vid.title}</h1>
+            <h1 className="videoInfo__title">{video.title}</h1>
             <div className="videoInfo__firstSubtitle">
-                <h2 className="videoInfo__creator">By {vid.creator}</h2>
-                <h5 className="videoInfo__date">{vid.date}</h5>
+                <h2 className="videoInfo__creator">By {video.creator}</h2>
+                <h5 className="videoInfo__date">{video.date}</h5>
             </div>
             <div className="videoInfo__secondSubtitle">
                 <div className="videoInfo__views-box">
