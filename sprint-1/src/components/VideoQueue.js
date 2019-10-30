@@ -1,5 +1,4 @@
 import React from 'react'
-import picBlank from '../assets/images/blank.jpg'
 
 export default function VideoQueue(props) {
     const videos = props.videoList.filter(video => video.title !== 'BMX Rampage: 2018 Highlights').map((video, index) => {
@@ -7,12 +6,12 @@ export default function VideoQueue(props) {
             <div key={index} className="videoQueue__post">
                 <div className="videoQueue__image-box">
                     {/* <img className="videoQueue__image" src={video.preview[Object.getOwnPropertyNames(video.preview)[0]]}></img> */}
-                    <img className="videoQueue__image" src={video.preview}></img>
+                    <img className="videoQueue__image" src={video.image}></img>
                 </div>
                 <div className="videoQueue__text-box">
                     <header className="videoQueue__header">
                         <h2 className="videoQueue__name">{video.title}</h2>
-                        <h5 className="videoQueue__date">{video.creator}</h5>
+                        <h5 className="videoQueue__date">{video.channel}</h5>
                     </header>
                     {/* <footer className="videoQueue__footer">
                         <div className="videoQueue__like-container">

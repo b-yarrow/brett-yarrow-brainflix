@@ -1,28 +1,30 @@
 import React from 'react'
-import vidPoster from '../assets/images/video-list-0.jpg'
-import vidFile from '../assets/video/brainStationSampleVideo.mp4';
-import playButton from '../assets/images/icons/SVG/icon-play.svg'
-import fullscreen from '../assets/images/icons/SVG/Icon-fullscreen.svg'
-import volume from '../assets/images/icons/SVG/Icon-volume.svg'
 
-export default function Video() {
+
+export default function Video(props) {
+    const video = props.video;
+    const image = props.image;
+    const icon = props.icons;
+    console.log(icon);
+    console.log(icon.play)
+    console.log(image);
     return (
         <div className="video__container">
             <div className="video__player-box">
-                <video width="320" height="183" poster={vidPoster}>
-                    <source src={vidFile} type="video/mp4"></source>
+                <video className="video__element" poster={image}>
+                    <source src={video} type="video/mp4"></source>
                 </video>
                 <div className="video__buttons-box">
                     <div className="video__buttons">
                         <div className="video__play-button">
-                            <img src={playButton} />
+                            <img src={icon.play} />
                         </div>
                         <div className="video__scrubber">
                             <progress className="video__progBar" value={0} max={100}></progress>
                         </div>
                         <div className="video__fs-vol">
-                            <img src={fullscreen} />
-                            <img src={volume} />
+                            <img src={icon.fullscreen} />
+                            <img src={icon.volume} />
                         </div>
                     </div>
                 </div>

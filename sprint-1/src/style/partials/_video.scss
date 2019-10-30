@@ -3,6 +3,15 @@
         display: flex;
         position: relative;
     }
+
+    &__element {
+        height: auto;
+        // height: auto;
+        width: 320px;
+        width: 100%;
+        // width: 400px;
+    }
+
     &__buttons-box {
         display: flex;
         // justify-content: space-between;

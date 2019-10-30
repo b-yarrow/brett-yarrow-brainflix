@@ -1,15 +1,11 @@
 import React from 'react'
-import picBlank from '../assets/images/blank.jpg'
-import picUser from '../assets/images/Mohan-muruge.jpg'
-
-const picPath = '../assets/images/'
 
 export default function Comments(props) {
-    const comments = props.commentAry.map((comment, index) => {
+    const comments = props.comments.map((comment, index) => {
         return (
             <div key={index} className="comments__post">
                 <div className="comments__image-box">
-                    <img className="comments__image" src={picBlank}></img>
+                    <img className="comments__image" src={props.picBlank}></img>
                 </div>
                 <div className="comments__text-box">
                     <header className="comments__header">
@@ -33,13 +29,13 @@ export default function Comments(props) {
 
     return (
         <section className="comments">
-            <h1 className="comments__title">{3} Comments</h1>
+            <h1 className="comments__title">{comments.length} Comments</h1>
             <div className="comments__container">
                 <div className="comments__post comments__post--create">
 
                     <div className="comments__image-box comments__image-box--create">
                         <img name="commentImage" className="comments__image comments__image--create"
-                            src={picUser}></img>
+                            src={props.profPic}></img>
                     </div>
                     <form className="comments__name--create" id="commentForm">
                         <div className="comments__text-box comments__text-box--create">
