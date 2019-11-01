@@ -2,20 +2,12 @@ import React from 'react'
 
 
 export default function VideoInfo(props) {
-    // const data = props.videoList[0].map(dat => {
-    //     console.log(dat);
-    // })
-
-    const video = props.mainVideo
-    // var vid = {
-    //     title: "BMX Rampage: 2018 Highlights",
-    //     channel: "Red Cow",
-    //     date: "12/18/2018",
-    //     views: "1,001,023",
-    //     likes: "110,985",
-    //     description: "On a gusty day in Southern Utah, a group of 25 daring mountain bikers blew the doors off what is possible on two wheels, unleashing some of the biggest moments the sport has ever seen. While mother nature only allowed for one full run before the conditions made it impossible to ride, that was all that was needed for event veteran Kyle Strait, who won the event for the second time -- eight years after his ﬁrst Red Cow Rampage title"
-    // }
-
+    const { video, icons } = props;
+    // const { likes, views} = icons;
+    // const video = props.mainVideo
+    console.log(video);
+    console.log(icons)
+    // const icons = props.icons
 
     return (
         <div className="videoInfo__container">
@@ -26,11 +18,11 @@ export default function VideoInfo(props) {
             </div>
             <div className="videoInfo__secondSubtitle">
                 <div className="videoInfo__views-box">
-                    <img className="videoInfo__views-icon" src={props.viewsIcon}></img>
+                    <img className="videoInfo__views-icon" src={icons.views}></img>
                     <span className="videoInfo__views-value">{video.views}</span>
                 </div>
                 <div className="videoInfo__likes-box">
-                    <img className="videoInfo__likes-icon" src={props.likesIcon}></img>
+                    <img className="videoInfo__likes-icon" src={icons.likes}></img>
                     <span className="videoInfo__likes-value">{video.likes}</span>
                 </div>
             </div>

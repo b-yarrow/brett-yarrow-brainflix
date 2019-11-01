@@ -12,17 +12,17 @@ export default function Header(props) {
             <nav className="header__list">
                 <div className="header__search-container">
                     {/* <i className="header__search-icon material-icons">search</i> */}
-                    <img className="header__search-icon" src={props.search}></img>
+                    <img className="header__search-icon" src={props.search} alt="Search Icon"></img>
                     <input className="header__search-input" type="search" name="profileName" id="fname"
                         placeholder="Search"></input>
                 </div>
                 <div className="header__upload-section">
                     <button className="header__button" name="uploadtButton">
-                        <img className="header__button--plus" src={props.upload}></img><span className="header__button--text">UPLOAD</span>
+                        <img className="header__button--plus" src={props.upload} alt="Plus Icon"></img><span className="header__button--text">UPLOAD</span>
                     </button>
                     <div className="header__image-box">
                         <img name="commentImage" className="header__image header__image--create"
-                            src={props.profPic} />
+                            src={props.profPic} alt="Profile" />
                     </div>
 
                 </div>

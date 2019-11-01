@@ -5,9 +5,7 @@ export default function Video(props) {
     const video = props.video;
     const image = props.image;
     const icon = props.icons;
-    console.log(icon);
-    console.log(icon.play)
-    console.log(image);
+
     return (
         <div className="video__container">
             <div className="video__player-box">
