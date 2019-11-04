@@ -1234,6 +1234,9 @@
   .comments {
     padding: 32px 0 40px 0;
   }
+  .comments__title {
+    margin-bottom: 0;
+  }
   .comments__text-box--create {
     width: 612px;
   }
@@ -1349,7 +1352,7 @@
 
 @media only screen and (min-width: 1440px) {
   .videoQueue {
-    padding: 48px 180px 40px 180px;
+    padding: 40px 0 0 32px;
   }
 }
 

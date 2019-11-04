@@ -332,6 +332,9 @@
 @include desktop {
     .comments {
         padding: 32px 0 40px 0;
+        &__title {
+            margin-bottom: 0;
+        }
 
         &__text-box--create {
             width: 612px;
