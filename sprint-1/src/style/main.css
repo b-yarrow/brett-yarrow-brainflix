@@ -720,11 +720,13 @@
 
 @media only screen and (min-width: 1440px) {
   .videoInfo__container {
+    padding: 48px 0 32px 0;
     width: 712px;
   }
   .videoInfo__title {
     font-size: 36px;
     line-height: 44px;
+    line-height: 36px;
     font-family: "AvenirNextBold";
     margin-bottom: 24px;
   }
@@ -1116,7 +1118,7 @@
 
 @media only screen and (min-width: 768px) {
   .comments {
-    padding: 48px 3.125vw 40px 3.125vw;
+    padding: 32px 3.125vw 40px 3.125vw;
   }
   .comments__title {
     font-size: 15.9px;
@@ -1127,17 +1129,24 @@
     padding: 0;
     width: 100%;
   }
-  .comments__image-box {
+  .comments__post {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 60px;
+    padding: 16px 0;
+    border-bottom: 1px solid #e1e1e1;
   }
   .comments__post--create {
     padding-bottom: 24px;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+  .comments__post--create__image-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 60px;
   }
   .comments__image-box--create {
     width: 68px;
@@ -1155,6 +1164,7 @@
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
+    margin-bottom: 8px;
   }
   .comments__name {
     margin-right: 8px;
@@ -1211,8 +1221,14 @@
 }
 
 @media only screen and (min-width: 1440px) {
-  .conversation {
-    padding: 48px 180px 40px 180px;
+  .comments {
+    padding: 32px 0 40px 0;
+  }
+  .comments__text-box--create {
+    width: 612px;
+  }
+  .comments__comment-input-container {
+    width: 436px;
   }
 }
 

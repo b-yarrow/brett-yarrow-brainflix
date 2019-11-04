@@ -138,11 +138,12 @@
 @include desktop {
 .videoInfo {
     &__container {
-        // padding: 48px 24px;
+        padding: 48px 0 32px 0;
         width: 712px;
     }
     &__title {
         @include desk__h1;
+        line-height: 36px;
         font-family: "AvenirNextBold";
         margin-bottom: 24px;
     }
