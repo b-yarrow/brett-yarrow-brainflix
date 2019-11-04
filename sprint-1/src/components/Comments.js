@@ -5,7 +5,7 @@ export default function Comments(props) {
         return (
             <div key={index} className="comments__post">
                 <div className="comments__image-box">
-                    <img className="comments__image" src={props.picBlank}></img>
+                    <img className="comments__image" src={props.picBlank} alt="avatar"></img>
                 </div>
                 <div className="comments__text-box">
                     <header className="comments__header">
@@ -35,16 +35,19 @@ export default function Comments(props) {
 
                     <div className="comments__image-box comments__image-box--create">
                         <img name="commentImage" className="comments__image comments__image--create"
-                            src={props.profPic}></img>
+                            src={props.profPic} alt="profile-avatar"></img>
                     </div>
                     <form className="comments__name--create" id="commentForm">
                         <div className="comments__text-box comments__text-box--create">
                             <div className="comments__comment comments__comment--create">
-                                <label htmlFor="fcomment">JOIN THE CONVERSATION</label>
-                                <textarea className="comments__comment-input" name="commentText" id="fcomment" cols="5" rows="5" placeholder="Add a new comment"></textarea>
+                                <div className="comments__comment-input-container">
+                                    <label htmlFor="fcomment">JOIN THE CONVERSATION</label>
+                                    <textarea className="comments__comment-input" name="commentText" id="fcomment" cols="5" rows="5" placeholder="Add a new comment"></textarea>
+                                </div>
                                 <button className="comments__button" name="commentButton">
                                     COMMENT
                                 </button>
+
                             </div>
                         </div>
                     </form>

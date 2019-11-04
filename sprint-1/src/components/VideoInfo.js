@@ -6,24 +6,43 @@ export default function VideoInfo(props) {
     // const { likes, views} = icons;
     // const video = props.mainVideo
     console.log(video);
+    console.log(video.date)
     console.log(icons)
     // const icons = props.icons
+
+    const dayFormat = (dayMilli) => {
+        let dayArray = [];
+        let day = new Date(dayMilli);
+
+        console.log(dayMilli)
+
+        // dayArray.push((day.getMonth() + 1) < 10 ? '0' + (day.getMonth() + 1) : (day.getMonth() + 1));
+        dayArray.push((day.getMonth() + 1));
+        dayArray.push(day.getDate());
+        dayArray.push(day.getFullYear());
+        console.log(dayArray);
+
+        return dayArray.join('/');
+    }
 
     return (
         <div className="videoInfo__container">
             <h1 className="videoInfo__title">{video.title}</h1>
-            <div className="videoInfo__firstSubtitle">
-                <h2 className="videoInfo__channel">By {video.channel}</h2>
-                <h5 className="videoInfo__date">{video.date}</h5>
-            </div>
-            <div className="videoInfo__secondSubtitle">
-                <div className="videoInfo__views-box">
-                    <img className="videoInfo__views-icon" src={icons.views}></img>
-                    <span className="videoInfo__views-value">{video.views}</span>
+            <div className="videoInfo__subtitle-box">
+                <div className="videoInfo__firstSubtitle">
+                    <h2 className="videoInfo__channel">By {video.channel}</h2>
+                    <h5 className="videoInfo__date">{dayFormat(video.timestamp)}</h5>
                 </div>
-                <div className="videoInfo__likes-box">
-                    <img className="videoInfo__likes-icon" src={icons.likes}></img>
-                    <span className="videoInfo__likes-value">{video.likes}</span>
+
+                <div className="videoInfo__secondSubtitle">
+                    <div className="videoInfo__views-box">
+                        <img className="videoInfo__views-icon" src={icons.views} alt="views"></img>
+                        <span className="videoInfo__views-value">{video.views}</span>
+                    </div>
+                    <div className="videoInfo__likes-box">
+                        <img className="videoInfo__likes-icon" src={icons.likes} alt="likes"></img>
+                        <span className="videoInfo__likes-value">{video.likes}</span>
+                    </div>
                 </div>
             </div>
             <div className="videoInfo__description-box">

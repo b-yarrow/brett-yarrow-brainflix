@@ -28,3 +28,13 @@ a {
 }
 
 .material-icons.md-18 { font-size: 18px; }
+
+@include desktop {
+    .bottom{
+        &__container{
+            display: flex;
+            flex-direction: row;
+            padding: 0 180px;
+        }
+    }
+}

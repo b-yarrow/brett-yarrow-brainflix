@@ -95,9 +95,13 @@ class App extends Component {
       <div>
         <Header profPic={this.state.profPic} logo={this.state.logo} search={this.state.icons.search} upload={this.state.icons.upload} />
         <Video image={this.state.mainVideo.image} video={this.state.mainVideo.video} icons={this.state.icons} />
-        <VideoInfo video={this.state.mainVideo} icons={this.state.icons} />
-        <Comments comments={this.state.mainVideo.comments} profPic={this.state.profPic} picBlank={this.state.picBlank} />
-        <VideoQueue videoList={this.state.videoList} load={this.loadMainVideo} />
+        <div className='bottom__container'>
+          <div className='bottom__info-comments'>
+            <VideoInfo video={this.state.mainVideo} icons={this.state.icons} />
+            <Comments comments={this.state.mainVideo.comments} profPic={this.state.profPic} picBlank={this.state.picBlank} />
+          </div>
+          <VideoQueue videoList={this.state.videoList} load={this.loadMainVideo} />
+        </div>
       </div>
     );
   }

@@ -6,7 +6,7 @@ export default function VideoQueue(props) {
             <div key={index} className="videoQueue__post">
                 <div className="videoQueue__image-box">
                     {/* <img className="videoQueue__image" src={video.preview[Object.getOwnPropertyNames(video.preview)[0]]}></img> */}
-                    <img className="videoQueue__image" src={video.image}></img>
+                    <img className="videoQueue__image" src={video.image} alt="preview"></img>
                 </div>
                 <div className="videoQueue__text-box">
                     <header className="videoQueue__header">
