@@ -491,7 +491,8 @@
     width: 700px;
   }
   .video__buttons-box {
-    padding: 0 42px;
+    width: 700px;
+    padding: 0 8px;
     bottom: 16px;
   }
   .video__scrubber {
@@ -527,7 +528,8 @@
     width: 944px;
   }
   .video__buttons-box {
-    padding: 0 264px;
+    width: 944px;
+    padding: 0 16px;
     bottom: 16px;
   }
   .video__scrubber {
