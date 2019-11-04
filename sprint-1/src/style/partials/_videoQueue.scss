@@ -43,8 +43,6 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-    //   margin-bottom: 16px;
-    
   }
 
   &__name {
@@ -53,11 +51,9 @@
     margin-bottom: 8px;
   }
 
-
-
   &__date {
     @include mob__h5;
-    
+
   }
 
 
@@ -71,8 +67,6 @@
         &__text-box {
             display: flex;
             width: 177px;
-            // height: 70px;
-            // margin-right: 16px;
         }
     }
 }

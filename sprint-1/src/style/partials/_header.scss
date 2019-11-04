@@ -1,12 +1,10 @@
 .header {
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 169px;
   background-color: $white;
-  // padding: 0 16px;
   padding: 0 5vw;
 
   &__logo-box {
@@ -36,8 +34,6 @@
     font-size: 14px;
     line-height: 22px;
     color: $silver;
-    // border-top: 5px solid $black;
-    // border-bottom: 5px solid $black;
 
     &-text {
       font-size: 14px;
@@ -49,7 +45,6 @@
 
     &--active {
       color: $white;
-      // border-bottom: 5px solid $white;
     }
   }
 
@@ -99,22 +94,17 @@
         background-color: $brainflix-blue;
         border: none;
         color: $white;
-        // text-align: center;
-        // text-justify: center;
 
         &:hover{
-            // border: 2px solid $black;
             background-color: $brainflix-blue-dark;
             outline: none;
         }
 
         &:focus {
-            // border: 2px solid $black;
             outline: none;
         }
 
         &:active {
-            // border: 2px solid $black;
             outline: none;
         }
 
@@ -128,18 +118,13 @@
     display: flex;
     height: 38px;
     width: 38px;
-    // background-color: $mercury;
-    // border: 1px solid $mercury;
     border-radius: 50%;
     z-index: 2;
   }
 
   &__image--create {
-        // display: block;
-        // margin-top: 20px;
         width: 48px;
         height: 48px;
-        // position: absolute;
         clip-path: rect(0px,200px,200px,0px);
   }
 }
@@ -173,14 +158,9 @@
     width: 288px;
   }
 
-  &__search-icon {
-    // no changes
-  }
-
   &__search-input {
       @include mob__h4-paragraph;
       height: 44px;
-      // width: 100%;
       width: 248px;
       border: 1px solid $mercury;
       border-radius: 4px;
@@ -204,14 +184,11 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    // width: 100%;
     align-items: center;
     text-align: center;
     font-size: 14px;
     line-height: 22px;
     color: $silver;
-    // border-top: 5px solid $black;
-    // border-bottom: 5px solid $black;
 
     &-text {
       font-size: 14px;
@@ -223,7 +200,6 @@
 
     &--active {
       color: $white;
-      // border-bottom: 5px solid $white;
     }
   }
       &__button {
@@ -240,22 +216,17 @@
         border: none;
         color: $white;
         padding: 0 8px;
-        // text-align: center;
-        // text-justify: center;
 
         &:hover{
-            // border: 2px solid $black;
             background-color: $brainflix-blue-dark;
             outline: none;
         }
 
         &:focus {
-            // border: 2px solid $black;
             outline: none;
         }
 
         &:active {
-            // border: 2px solid $black;
             outline: none;
         }
 
@@ -281,8 +252,6 @@
     display: flex;
     height: 44px;
     width: 44px;
-    // background-color: $mercury;
-    // border: 1px solid $mercury;
     border-radius: 50%;
     z-index: 2;
   }

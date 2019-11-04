@@ -89,7 +89,6 @@
   }
 
   &__name--create {
-    // @include mob__h2;
     @include mob__h5;
     font-family: "AvenirNextDemiBold";
     display: flex;
@@ -198,15 +197,10 @@
     }
 
     &__delete {
-        // width: 12px;
-        // height: 12px;
         border: 1px solid $mercury;
         color: $black;
         border-radius: 2px;
         background-color: $white;
-        // box-shadow: 0 40px 32px -4px #000000;
-        // font-style: italic;
-        
 
         &:hover {
             border-color: $black;
@@ -260,7 +254,6 @@
         &__image-box {
             display: flex;
             width: 60px;
-            // background-color: $mercury;
         }
         
         }
@@ -303,7 +296,6 @@
         &__comment--create {
             @include desk__h5;
             flex-direction: row;
-            // justify-content: space-between;
         }
 
         &__comment-input-container {
