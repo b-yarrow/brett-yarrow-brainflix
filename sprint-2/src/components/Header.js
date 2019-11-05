@@ -1,13 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 export default function Header(props) {
     return (
         <header className="header">
             <div className="header__logo-box">
-                <a href="index.html">
+                <Link to="/">
                     <img className="header__logo" src={props.logo} alt="Brainflix Logo" />
-                </a>
+                </Link>
             </div>
             <nav className="header__list">
                 <div className="header__search-container">
@@ -17,9 +18,11 @@ export default function Header(props) {
                         placeholder="Search"></input>
                 </div>
                 <div className="header__upload-section">
-                    <button className="header__button" name="uploadtButton">
-                        <img className="header__button--plus" src={props.upload} alt="Plus Icon"></img><span className="header__button--text">UPLOAD</span>
-                    </button>
+                    <Link to="/upload">
+                        <button className="header__button" name="uploadtButton">
+                            <img className="header__button--plus" src={props.upload} alt="Plus Icon"></img><span className="header__button--text">UPLOAD</span>
+                        </button>
+                    </Link>
                     <div className="header__image-box">
                         <img name="commentImage" className="header__image header__image--create"
                             src={props.profPic} alt="Profile" />

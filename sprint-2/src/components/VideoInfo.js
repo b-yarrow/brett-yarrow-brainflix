@@ -5,22 +5,16 @@ export default function VideoInfo(props) {
     const { video, icons } = props;
     // const { likes, views} = icons;
     // const video = props.mainVideo
-    console.log(video);
-    console.log(video.date)
-    console.log(icons)
     // const icons = props.icons
 
     const dayFormat = (dayMilli) => {
         let dayArray = [];
         let day = new Date(dayMilli);
 
-        console.log(dayMilli)
-
         // dayArray.push((day.getMonth() + 1) < 10 ? '0' + (day.getMonth() + 1) : (day.getMonth() + 1));
         dayArray.push((day.getMonth() + 1));
         dayArray.push(day.getDate());
         dayArray.push(day.getFullYear());
-        console.log(dayArray);
 
         return dayArray.join('/');
     }
