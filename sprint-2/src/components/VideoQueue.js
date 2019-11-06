@@ -30,6 +30,7 @@ export default function VideoQueue(props) {
             </Link>
         );
     })
+    console.log(videos);
     return (
         <section className="videoQueue">
             <h5 className="videoQueue__title">NEXT VIDEO</h5>

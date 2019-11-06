@@ -100,6 +100,7 @@ class App extends Component {
         this.setState({
           mainVideo: response.data
         });
+        console.log(this.state.mainVideo);
         // console.log('made it here?');
       }).catch((error) => {
         // handle error
@@ -159,10 +160,10 @@ class App extends Component {
               <Route
                 path="/video/:videoId"
                 render={props => {
-                  // console.log(props);
                   const currentVideo = this.state.videoList.find(
                     video => video.id === props.match.params.videoId
                   );
+                  console.log('hi im here in theis route')
                   if ((currentVideo !== undefined) && (this.state.mainVideo.id !== currentVideo.id)) {
                     this.updateMainVid(currentVideo.id);
                   }
@@ -172,18 +173,15 @@ class App extends Component {
                 }}
               />
             </Switch>
-            {/* <Video image={this.state.mainVideo.image} video={this.state.mainVideo.video} icons={this.state.icons} /> */}
             <div className='bottom__container'>
               <div className='bottom__info-comments'>
                 <VideoInfo video={this.state.mainVideo} icons={this.state.icons} />
-                {/* <Comments comments={this.state.mainVideo.comments} profPic={this.state.profPic} picBlank={this.state.picBlank} /> */}
+                <Comments comments={this.state.mainVideo.comments} profPic={this.state.profPic} picBlank={this.state.picBlank} />
               </div>
-              {/* <VideoQueueLoad onLoad={this.updateVideoList} /> */}
               <VideoQueue videoList={this.state.videoList} current={this.state.mainVideo.id} />
 
             </div>
           </div>
-          {/* <Route path="/" exact render={() => ()} /> */}
 
           <Route path="/upload" component={Upload} />
         </Switch>

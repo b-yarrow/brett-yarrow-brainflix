@@ -1,6 +1,23 @@
 import React from 'react'
 
 export default function Comments(props) {
+    if (props.comments === undefined) {
+        return (<p>loading...</p>)
+    }
+    console.log(props.comments)
+
+    function dayFormat(dayMilli) {
+        let dayArray = [];
+        let day = new Date(dayMilli);
+
+        // dayArray.push((day.getMonth() + 1) < 10 ? '0' + (day.getMonth() + 1) : (day.getMonth() + 1));
+        dayArray.push((day.getMonth() + 1));
+        dayArray.push(day.getDate());
+        dayArray.push(day.getFullYear());
+
+        return dayArray.join('/');
+    }
+
     const comments = props.comments.map((comment, index) => {
         return (
             <div key={index} className="comments__post">
@@ -10,7 +27,7 @@ export default function Comments(props) {
                 <div className="comments__text-box">
                     <header className="comments__header">
                         <h2 className="comments__name">{comment.name}</h2>
-                        <h5 className="comments__date">{comment.date}</h5>
+                        <h5 className="comments__date">{dayFormat(comment.timestamp)}</h5>
                     </header>
                     <p className="comments__comment">
                         {comment.comment}
