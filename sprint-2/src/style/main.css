@@ -523,9 +523,11 @@
             justify-content: center;
     background-color: #000000;
     padding: 0 248px;
+    height: 540px;
   }
   .video__element {
     width: 944px;
+    height: 540px;
   }
   .video__buttons-box {
     width: 944px;

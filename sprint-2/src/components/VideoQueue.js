@@ -7,8 +7,8 @@ export default function VideoQueue(props) {
     const videos = props.videoList.filter(video => video.id !== props.current).map((video, index) => {
 
         return (
-            <Link to={`/video/${video.id}`}>
-                <div key={index} className="videoQueue__post">
+            <Link key={index} to={`/video/${video.id}`}>
+                <div className="videoQueue__post">
                     <div className="videoQueue__image-box">
                         {/* <img className="videoQueue__image" src={video.preview[Object.getOwnPropertyNames(video.preview)[0]]}></img> */}
                         <img className="videoQueue__image" src={video.image} alt="preview"></img>
@@ -30,7 +30,6 @@ export default function VideoQueue(props) {
             </Link>
         );
     })
-    console.log(videos);
     return (
         <section className="videoQueue">
             <h5 className="videoQueue__title">NEXT VIDEO</h5>

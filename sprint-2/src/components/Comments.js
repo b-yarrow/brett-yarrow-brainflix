@@ -4,7 +4,6 @@ export default function Comments(props) {
     if (props.comments === undefined) {
         return (<p>loading...</p>)
     }
-    console.log(props.comments)
 
     function dayFormat(dayMilli) {
         let dayArray = [];
