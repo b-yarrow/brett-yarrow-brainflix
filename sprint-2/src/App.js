@@ -52,33 +52,6 @@ function sideVideo(id, title, channel, image) {
 }
 
 class App extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     profPic: picUser,
-  //     logo: logoBF,
-  //     picBlank: picBlank,
-
-  //     videoList: [],
-
-  //     currentId: '0',
-
-  //     mainVideo: {},
-
-  //     changeVideo: false,
-
-  //     icons: {
-  //       play: playIcon,
-  //       fullscreen: fullscreenIcon,
-  //       volume: volumeIcon,
-  //       upload: uploadIcon,
-  //       search: searchIcon,
-  //       likes: likesIcon,
-  //       views: viewsIcon
-  //     }
-  //   }
-  // }
-
   state = {
     profPic: picUser,
     logo: logoBF,
@@ -139,26 +112,40 @@ class App extends Component {
             path="/" exact
             render={props => {
               return (
-                <Video updateMainVid={this.updateMainVid} {...props} image={this.state.mainVideo.image} video={this.state.mainVideo.video} icons={this.state.icons} />
+                <>
+                  <Video updateMainVid={this.updateMainVid} {...props} image={this.state.mainVideo.image} video={this.state.mainVideo.video} icons={this.state.icons} />
+
+                  <div className='bottom__container'>
+                    <div className='bottom__info-comments'>
+                      <VideoInfo video={this.state.mainVideo} icons={this.state.icons} />
+                      <Comments comments={this.state.mainVideo.comments} profPic={this.state.profPic} picBlank={this.state.picBlank} />
+                    </div>
+                    <VideoQueue videoList={this.state.videoList} current={this.state.mainVideo.id} />
+
+                  </div>
+                </>
               );
             }}
           />
           <Route
             path="/video/:videoId"
             render={props =>
-              <Video updateMainVid={this.updateMainVid} {...props} image={this.state.mainVideo.image} video={this.state.mainVideo.video} icons={this.state.icons} />
+              <>
+                <Video updateMainVid={this.updateMainVid} {...props} image={this.state.mainVideo.image} video={this.state.mainVideo.video} icons={this.state.icons} />
+                <div className='bottom__container'>
+                  <div className='bottom__info-comments'>
+                    <VideoInfo video={this.state.mainVideo} icons={this.state.icons} />
+                    <Comments comments={this.state.mainVideo.comments} profPic={this.state.profPic} picBlank={this.state.picBlank} />
+                  </div>
+                  <VideoQueue videoList={this.state.videoList} current={this.state.mainVideo.id} />
+
+                </div>
+              </>
             }
           />
           <Route path="/upload" component={Upload} />
         </Switch>
-        <div className='bottom__container'>
-          <div className='bottom__info-comments'>
-            <VideoInfo video={this.state.mainVideo} icons={this.state.icons} />
-            <Comments comments={this.state.mainVideo.comments} profPic={this.state.profPic} picBlank={this.state.picBlank} />
-          </div>
-          <VideoQueue videoList={this.state.videoList} current={this.state.mainVideo.id} />
 
-        </div>
       </div>
     );
   }

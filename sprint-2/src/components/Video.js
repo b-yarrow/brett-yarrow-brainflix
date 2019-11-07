@@ -9,12 +9,12 @@ export default class Video extends Component {
     }
 
     componentDidUpdate(prevProps) {
+        console.log(this.props)
+        console.log(prevProps)
         if ((this.props.match.params.videoId !== undefined) && (this.props.match.params.videoId !== prevProps.match.params.videoId)) {
             this.props.updateMainVid(this.props.match.params.videoId);
         }
     }
-
-
 
     render() {
         const video = this.props.video;
