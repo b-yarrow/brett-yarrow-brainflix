@@ -1,0 +1,342 @@
+.upload {
+  padding: 8px 5vw 0 5vw;
+//   background-color: $alabaster;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    display: flex;
+    align-self: flex-start;
+    @include mob__h1;
+    // font-family: "AvenirNextDemiBold";
+    font-family: "AvenirNextBold";
+    // font-size: 24px;
+    // line-height: 32px;
+    margin-bottom: 32px;
+
+  }
+  
+  &__container {
+      display: flex;
+      flex-direction: column;
+  }
+
+  &__post {
+      display: flex;
+      flex-direction: column;
+      padding: 24px 0;
+      border-bottom: 1px solid $mercury;
+  }
+
+  &__post-container {
+    display: flex;
+    flex-direction: column-reverse;
+
+  }
+
+  &__post--create {
+      justify-content: space-between;
+      padding-top: 0px;
+      padding-bottom: 24px;
+  }
+
+  &__image-box {
+    @include mob__h5;
+    font-family: "AvenirNextDemiBold";
+    display: flex;
+    flex-direction: column;
+    width: 288px;
+    margin-bottom: 32px;
+    // background-color: $mercury;
+  }
+
+  &__image {
+    display: flex;
+    height: 153px;
+    width: 288px;
+    // background-color: $mercury;
+    // border: 1px solid $mercury;
+    border-radius: 4px;
+    z-index: 2;
+  }
+
+
+  &__text-box {
+      display: flex;
+      flex-direction: column;
+      width: 234px;
+  }
+
+  &__text-box--create {
+      width: 224px;
+  }
+
+  &__header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    
+  }
+
+  &__name {
+    @include mob__h2;
+    font-family: "AvenirNextDemiBold";
+  }
+
+  &__name--create {
+    @include mob__h5;
+    font-family: "AvenirNextDemiBold";
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name-input {
+      @include mob__h4-paragraph;
+      height: 48px;
+      border: 1px solid $mercury;
+      border-radius: 4px;
+      background-color: $alabaster;
+      margin-bottom: 24px;
+      padding-left: 16px;
+      color: $black;
+
+      &::placeholder {
+          color: $black;
+      }
+
+      &:focus {
+          border: 2px solid $black;
+          outline: none;
+      }
+
+  }
+
+  &__date {
+    @include mob__h5;
+    
+  }
+
+  &__comment {
+      font-family: "AvenirNextRegular";
+      @include mob__h4-paragraph;
+  }
+
+  &__comment--create {
+      @include mob__h5;
+      font-family: "AvenirNextDemiBold";
+      display: flex;
+      flex-direction: column;
+      width: 288px;
+  }
+
+  &__comment-input-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+    &__comment-input {
+        @include mob__h4-paragraph;
+        height: 143px;
+        border: 1px solid $mercury;
+        border-radius: 4px;
+        background-color: $alabaster;
+        margin-bottom: 32px;
+        padding-left: 16px;
+        padding-top: 16px;
+        color: $black;
+        &::placeholder {
+            color: $black;
+        }
+
+        &:focus {
+            border: 2px solid $brainflix-blue;
+            outline: none;
+        }
+    }
+
+    &__button {
+        @include mob__h4-paragraph;
+        font-family: "AvenirNextDemiBold";
+        margin-bottom: 24px;
+        height: 48px;
+        border-radius: 4px;
+        background-color: $brainflix-blue;
+        border: none;
+        color: $white;
+
+        &:hover{
+            border: 2px solid $brainflix-blue-dark;
+            background-color: $brainflix-blue-dark;
+            outline: none;
+        }
+
+        &:focus {
+            border: 2px solid $brainflix-blue-dark;
+            outline: none;
+        }
+
+        &:active {
+            border: 2px solid $brainflix-blue-dark;
+            outline: none;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 16px;
+    }
+
+    &__like-container{
+        display: flex;
+        align-items: center;
+    }
+
+    &__delete {
+        border: 1px solid $mercury;
+        color: $black;
+        border-radius: 2px;
+        background-color: $white;
+
+        &:hover {
+            border-color: $black;
+            background-color: $black;
+            color: $white;
+            outline: none;
+        }
+    }
+
+    &__like {
+        border: none;
+        color: $silver;
+        background-color: $white;
+        
+
+        &:hover{
+            color: $black;
+        }
+    }
+
+    &__like-value {
+        @include mob__h2;
+        font-family: "AvenirNextDemiBold";
+    }
+
+    &__cancel {
+        display: flex;
+        justify-content: center;
+        color: $brainflix-blue;
+    }
+}
+
+@include tablet {
+    .comments {
+        padding: 32px 3.125vw 0 3.125vw;
+
+        &__title {
+            @include desk__h3;
+            margin-bottom: 32px;
+        }
+
+        &__container {
+            padding: 0;
+            width: 100%;
+        }
+
+        &__post {
+            display: flex;
+            padding: 16px 0;
+            border-bottom: 1px solid $mercury;
+        }
+
+        &__post--create {
+            padding-bottom: 24px;
+            justify-content: flex-start;
+
+        &__image-box {
+            display: flex;
+            width: 60px;
+        }
+        
+        }
+        &__image-box--create {
+            width: 68px;
+        }
+
+        &__text-box {
+            width: 624px;
+        }
+
+        &__text-box--create {
+            width: 616px;
+        }
+
+        &__header {
+            justify-content: flex-start;
+            align-items: baseline;
+            margin-bottom: 8px;
+        }
+
+        &__name {
+            margin-right: 8px;
+        } 
+
+        &__name--create {
+            @include desk__h5;
+            flex-direction: row;
+
+        }
+
+        &__name-input {
+            @include desk__h4-paragraph;
+        }
+
+        &__date {
+            @include desk__h5;
+        }
+
+        &__comment--create {
+            @include desk__h5;
+            flex-direction: row;
+        }
+
+        &__comment-input-container {
+            display: flex;
+            flex-direction: column;
+            width: 440px;
+            margin-right: 16px;
+        }
+
+        &__comment-input {
+            @include desk__h4-paragraph;
+            height: 48px;
+            padding-top: 12px;
+            margin-bottom: 0;
+        }
+
+        &__button {
+            @include desk__h4-paragraph;
+            width: 160px;
+            align-self: flex-end;
+
+        }
+    }
+}
+
+@include desktop {
+    .comments {
+        padding: 32px 0 40px 0;
+        &__title {
+            margin-bottom: 0;
+        }
+
+        &__text-box--create {
+            width: 612px;
+        }
+
+        &__comment-input-container {
+            width: 436px;
+        }
+    }
+}

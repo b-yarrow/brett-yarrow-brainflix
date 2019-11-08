@@ -114,7 +114,6 @@ class App extends Component {
               return (
                 <>
                   <Video updateMainVid={this.updateMainVid} {...props} image={this.state.mainVideo.image} video={this.state.mainVideo.video} icons={this.state.icons} />
-
                   <div className='bottom__container'>
                     <div className='bottom__info-comments'>
                       <VideoInfo video={this.state.mainVideo} icons={this.state.icons} />
