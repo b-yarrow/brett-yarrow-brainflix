@@ -7,28 +7,32 @@ export default function Upload() {
             <h1 className="upload__title">Upload Video</h1>
             <div className="upload__container">
                 <div className="upload__post upload__post--create">
-
-                    <div className="upload__image-box upload__image-box--create">
-                        <label>VIDEO THUMBNAIL</label>
-                        <img name="uploadImage" className="upload__image upload__image--create"
-                            src={picUpload} alt="profile-avatar"></img>
-                    </div>
-                    <form className="upload__name--create" id="commentForm">
-                        <label for="fname">TITLE YOUR VIDEO</label>
-                        <input class="upload__name-input" type="text" name="uploadName" id="fname"
-                            placeholder="Add a title to your video" />
-                        <div className="upload__text-box upload__text-box--create">
-                            <div className="upload__comment upload__comment--create">
-                                <div className="upload__comment-input-container">
-                                    <label htmlFor="fcomment">ADD A VIDEO DESCRIPTION</label>
-                                    <textarea className="upload__comment-input" name="commentText" id="fcomment" cols="5" rows="5" placeholder="Add a description of your video"></textarea>
-                                </div>
-                                <button className="upload__button" name="commentButton">
-                                    PUBLISH
-                                </button>
-                                <h3 className="upload__cancel">CANCEL</h3>
-
+                    <form className="upload__vidForm" id="commentForm">
+                        <div className="upload__image-title-desc-box">
+                            <div className="upload__image-box">
+                                <label>VIDEO THUMBNAIL</label>
+                                <img name="uploadImage" className="upload__image upload__image--create"
+                                    src={picUpload} alt="profile-avatar"></img>
                             </div>
+                            <div className="upload__title-desc-box">
+                                <div className="upload__vidTitle">
+                                    <label for="ftitle">TITLE YOUR VIDEO</label>
+                                    <input class="upload__vidTitle-input" type="text" name="uploadName" id="ftitle"
+                                        placeholder="Add a title to your video" />
+                                </div>
+                                <div className="upload__description">
+                                    <div className="upload__description-input-container">
+                                        <label htmlFor="fcomment">ADD A VIDEO DESCRIPTION</label>
+                                        <textarea className="upload__description-input" name="commentText" id="fcomment" cols="5" rows="5" placeholder="Add a description of your video"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="upload__button-box">
+                            <button className="upload__button" name="publishButton">
+                                PUBLISH
+                            </button>
+                            <h3 className="upload__cancel">CANCEL</h3>
                         </div>
                     </form>
                 </div>
