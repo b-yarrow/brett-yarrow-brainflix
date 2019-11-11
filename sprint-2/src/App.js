@@ -6,7 +6,6 @@ import Video from './components/Video';
 import VideoInfo from './components/VideoInfo';
 import Comments from './components/Comments';
 import VideoQueue from './components/VideoQueue';
-// import VideoQueueLoad from './components/VideoQueueLoad';
 
 import Upload from './components/Upload';
 import Header from './components/Header';
@@ -36,20 +35,6 @@ import searchIcon from './assets/images/icons/SVG/Icon-search.svg'
 
 
 const apiString = '?api_key=0b33844c-e41d-4ee8-a9cc-e0dde9c37a54';
-
-function commentObj(name, avatar, date, comment) {
-  this.name = name;
-  this.avatar = avatar;
-  this.date = date;
-  this.comment = comment;
-}
-
-function sideVideo(id, title, channel, image) {
-  this.id = id;
-  this.title = title;
-  this.channel = channel;
-  this.image = image;
-}
 
 class App extends Component {
   state = {
@@ -90,15 +75,12 @@ class App extends Component {
   }
 
   updateMainVid = (match) => {
-    console.log('Called updateMainVid: ', match)
     axios.get('https://project-2-api.herokuapp.com/videos/' +
       match + apiString)
       .then(response => {
         this.setState({
           mainVideo: response.data
         });
-      }).catch(error => {
-        console.log(error);
       })
   }
 
@@ -137,7 +119,6 @@ class App extends Component {
                     <Comments comments={this.state.mainVideo.comments} profPic={this.state.profPic} picBlank={this.state.picBlank} />
                   </div>
                   <VideoQueue videoList={this.state.videoList} current={this.state.mainVideo.id} />
-
                 </div>
               </>
             }

@@ -9,7 +9,6 @@ export default function Comments(props) {
         let dayArray = [];
         let day = new Date(dayMilli);
 
-        // dayArray.push((day.getMonth() + 1) < 10 ? '0' + (day.getMonth() + 1) : (day.getMonth() + 1));
         dayArray.push((day.getMonth() + 1));
         dayArray.push(day.getDate());
         dayArray.push(day.getFullYear());
@@ -31,13 +30,6 @@ export default function Comments(props) {
                     <p className="comments__comment">
                         {comment.comment}
                     </p>
-                    {/* <footer className="comments__footer">
-                        <div className="comments__like-container">
-                            <button className="comments__like">like</button>
-                            &nbsp;&#8226;&nbsp;<span className="comments__like-value">###</span>
-                        </div>
-                        <button className="comments__delete">delete</button>
-                    </footer> */}
                 </div>
             </div>
         );
