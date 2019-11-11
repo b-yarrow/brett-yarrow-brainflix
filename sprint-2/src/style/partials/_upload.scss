@@ -136,6 +136,8 @@
     }
 
     &__button-box {
+        @include mob__h4-paragraph;
+        font-family: "AvenirNextDemiBold";
         display: flex;
         flex-direction: column;
 

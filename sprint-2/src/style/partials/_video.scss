@@ -2,12 +2,13 @@
     &__player-box {
         display: flex;
         position: relative;
+        background-color: #000000;
     }
 
     &__element {
-        height: auto;
+        height: 183px;
         width: 320px;
-        width: 100%;
+        object-fit: cover;
     }
 
     &__buttons-box {
@@ -92,6 +93,8 @@
 
     &__element {
         width: 700px;
+        height: 400px;
+        object-fit: cover;
     }
 
     &__buttons-box {
@@ -132,6 +135,7 @@
     &__element {
         width: 944px;
         height: 540px;
+        object-fit: cover;
     }
 
     &__buttons-box {

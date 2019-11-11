@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  justify-content: center;
+  // width: 100%;
   height: 169px;
   background-color: $white;
   padding: 0 5vw;
@@ -20,7 +21,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    // width: 100%;
     margin-bottom: 16px;
   }
 
@@ -28,7 +29,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    width: 100%;
+    // width: 100%;
     align-items: center;
     text-align: center;
     font-size: 14px;
@@ -63,7 +64,7 @@
   &__search-input {
       @include mob__h4-paragraph;
       height: 49px;
-      width: 100%;
+      width: 288px;
       border: 1px solid $mercury;
       border-radius: 4px;
       background-color: $alabaster;
@@ -151,17 +152,17 @@
     justify-content: flex-end;
     align-items: center;
     margin-bottom: 0;
-    width: auto;
+    width: 447px;
   }
 
   &__search-container {
-    width: 288px;
+    width: 276px;
   }
 
   &__search-input {
       @include mob__h4-paragraph;
       height: 44px;
-      width: 248px;
+      width: 252px;
       border: 1px solid $mercury;
       border-radius: 4px;
       background-color: $alabaster;
@@ -189,6 +190,7 @@
     font-size: 14px;
     line-height: 22px;
     color: $silver;
+    width: 171px;
 
     &-text {
       font-size: 14px;
@@ -209,7 +211,7 @@
         justify-content: center;
         font-family: "AvenirNextDemiBold";
         line-height: 14px;
-        width: auto;
+        width: 103px;
         height: 44px;
         border-radius: 4px;
         background-color: $brainflix-blue;
@@ -261,5 +263,6 @@
 @include desktop {
   .header {
     padding: 0 12.5vw;
+    // justify-content: center;
   }
 }

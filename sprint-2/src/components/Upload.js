@@ -36,9 +36,6 @@ export default function Upload() {
                         </div>
                     </form>
                 </div>
-                <div className="upload__post-container">
-                    {/* {comments} */}
-                </div>
             </div>
         </section>
     )

@@ -12,7 +12,6 @@ export default function Header(props) {
             </div>
             <nav className="header__list">
                 <div className="header__search-container">
-                    {/* <i className="header__search-icon material-icons">search</i> */}
                     <img className="header__search-icon" src={props.search} alt="Search Icon"></img>
                     <input className="header__search-input" type="search" name="profileName" id="fname"
                         placeholder="Search"></input>
