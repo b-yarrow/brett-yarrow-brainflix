@@ -1,0 +1,164 @@
+.video {
+    &__player-box {
+        display: flex;
+        position: relative;
+        background-color: #000000;
+    }
+
+    &__element {
+        height: 183px;
+        width: 320px;
+        object-fit: cover;
+    }
+
+    &__buttons-box {
+        display: flex;
+        position: absolute;
+        padding: 0 16px;
+        bottom: 8px;
+        width: 100%;
+    }
+        
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__play-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $black-transparent;
+        width: 52px;
+        height: 36px;
+        border-radius: 4px;
+    }
+
+    &__scrubber {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $black-transparent;
+        flex: auto;
+        margin: 0 8px;
+        height: 36px;
+        border-radius: 4px;
+    }
+
+    &__progBar {
+        -webkit-appearance: none;
+        appearance: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        width: 100%;
+        height: 8px;
+        border-radius: 4px;
+        margin: 0 16px;
+
+        &::-webkit-progress-bar {
+            background-color: $black;
+            border-radius: 4px;
+        }
+
+        &::-webkit-progress-value {
+            background-color: $brainflix-blue;
+            border-radius: 4px;
+        }
+    }
+    &__time {
+        display: none;
+    }
+
+    &__fs-vol {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: $black-transparent;
+        width: 90px;
+        height: 36px;
+        border-radius: 4px;
+    }
+}
+
+@include tablet {
+    .video {
+    &__player-box {
+        justify-content: center;
+        background-color: #000000;
+        padding: 0 34px;
+    }
+
+    &__element {
+        width: 700px;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    &__buttons-box {
+        width: 700px;
+        padding: 0 8px;
+        bottom: 16px;
+    }
+        
+    &__scrubber {
+        margin: 0 16px;
+        justify-content: space-between;
+    }
+
+    &__progBar {
+        width: 80%;
+    }
+
+    &__time {
+        @include desk__h5;
+        display: flex;
+        color: $white;
+        width: auto;
+        margin-right: 16px;
+    }
+
+}
+}
+
+@include desktop {
+    .video {
+    &__player-box {
+        justify-content: center;
+        background-color: #000000;
+        padding: 0 248px;
+        height: 540px;
+    }
+
+    &__element {
+        width: 944px;
+        height: 540px;
+        object-fit: cover;
+    }
+
+    &__buttons-box {
+        width: 944px;
+        padding: 0 16px;
+        bottom: 16px;
+        
+    }
+        
+    &__scrubber {
+        margin: 0 16px;
+        justify-content: space-between;
+    }
+
+    &__progBar {
+        width: 85%;
+    }
+    &__time {
+        @include desk__h5;
+        display: flex;
+        color: $white;
+        width: auto;
+        margin-right: 16px;
+    }
+}
+}

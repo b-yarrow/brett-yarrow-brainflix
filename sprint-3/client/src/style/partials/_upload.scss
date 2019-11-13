@@ -1,0 +1,581 @@
+.upload {
+  padding: 8px 5vw 0 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    display: flex;
+    align-self: flex-start;
+    @include mob__h1;
+    font-family: "AvenirNextBold";
+    margin-bottom: 32px;
+
+  }
+  
+  &__container {
+      display: flex;
+      flex-direction: column;
+  }
+
+  &__post {
+      display: flex;
+      flex-direction: column;
+      padding: 24px 0;
+      border-bottom: 1px solid $mercury;
+  }
+
+  &__post-container {
+    display: flex;
+    flex-direction: column-reverse;
+
+  }
+
+  &__post--create {
+      justify-content: space-between;
+      padding-top: 0px;
+      padding-bottom: 24px;
+  }
+
+  &__image-box {
+    @include mob__h5;
+    font-family: "AvenirNextDemiBold";
+    display: flex;
+    flex-direction: column;
+    width: 288px;
+    margin-bottom: 32px;
+  }
+
+  &__image {
+    display: flex;
+    height: 153px;
+    width: 288px;
+    border-radius: 4px;
+    z-index: 2;
+  }
+
+
+  &__text-box {
+      display: flex;
+      flex-direction: column;
+      width: 234px;
+  }
+
+  &__description-box {
+      display: flex;
+      flex-direction: column;
+      width: 288px;
+  }
+
+  &__header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    
+  }
+
+  &__vidTitle {
+    @include mob__h5;
+    font-family: "AvenirNextDemiBold";
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__vidTitle-input {
+      @include mob__h4-paragraph;
+      height: 48px;
+      border: 1px solid $mercury;
+      border-radius: 4px;
+      background-color: $alabaster;
+      margin-bottom: 24px;
+      padding-left: 16px;
+      color: $black;
+
+      &::placeholder {
+          color: $black;
+      }
+
+      &:focus {
+          border: 2px solid $brainflix-blue;
+          outline: none;
+      }
+
+  }
+
+  &__description {
+      @include mob__h5;
+      font-family: "AvenirNextDemiBold";
+      display: flex;
+      flex-direction: column;
+      width: 288px;
+  }
+
+  &__description-input-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+    &__description-input {
+        @include mob__h4-paragraph;
+        height: 143px;
+        border: 1px solid $mercury;
+        border-radius: 4px;
+        background-color: $alabaster;
+        margin-bottom: 32px;
+        padding-left: 16px;
+        padding-top: 16px;
+        color: $black;
+        &::placeholder {
+            color: $black;
+        }
+
+        &:focus {
+            border: 2px solid $brainflix-blue;
+            outline: none;
+        }
+    }
+
+    &__button-box {
+        @include mob__h4-paragraph;
+        font-family: "AvenirNextDemiBold";
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__button {
+        @include mob__h4-paragraph;
+        font-family: "AvenirNextDemiBold";
+        margin-bottom: 24px;
+        height: 48px;
+        border-radius: 4px;
+        background-color: $brainflix-blue;
+        border: none;
+        color: $white;
+
+        &:hover{
+            border: 2px solid $brainflix-blue-dark;
+            background-color: $brainflix-blue-dark;
+            outline: none;
+        }
+
+        &:focus {
+            border: 2px solid $brainflix-blue-dark;
+            outline: none;
+        }
+
+        &:active {
+            border: 2px solid $brainflix-blue-dark;
+            outline: none;
+        }
+    }
+
+    &__cancel {
+        display: flex;
+        justify-content: center;
+        color: $brainflix-blue;
+    }
+}
+
+@include tablet {
+    .upload {
+    padding: 48px 3.125vw 0 3.125vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        display: flex;
+        align-self: flex-start;
+        @include desk__h1;
+        font-family: "AvenirNextBold";
+        margin-bottom: 32px;
+        
+
+    }
+    
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-top: 1px solid $mercury;
+        padding-top: 40px;
+    }
+
+    &__post {
+        display: flex;
+        flex-direction: column;
+        padding: 24px 0;
+        border-bottom: 1px solid $mercury;
+    }
+
+    &__post-container {
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+
+    &__post--create {
+        justify-content: space-between;
+        padding-top: 0px;
+        padding-bottom: 24px;
+    }
+
+    &__image-box {
+        @include mob__h5;
+        font-family: "AvenirNextDemiBold";
+        display: flex;
+        flex-direction: column;
+        width: 344px;
+        margin-bottom: 40px;
+    }
+
+    &__image {
+        display: flex;
+        height: 183px;
+        width: 344px;
+        border-radius: 4px;
+        z-index: 2;
+    }
+
+
+    &__text-box {
+        display: flex;
+        flex-direction: column;
+        width: 234px;
+    }
+
+    &__description-box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        
+    }
+
+    &__vidTitle {
+        @include mob__h5;
+        font-family: "AvenirNextDemiBold";
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__vidTitle-input {
+        @include mob__h4-paragraph;
+        height: 48px;
+        border: 1px solid $mercury;
+        border-radius: 4px;
+        background-color: $alabaster;
+        margin-bottom: 24px;
+        padding-left: 16px;
+        color: $black;
+
+        &::placeholder {
+            color: $black;
+        }
+
+        &:focus {
+            border: 2px solid $brainflix-blue;
+            outline: none;
+        }
+
+    }
+
+    &__description {
+        @include mob__h5;
+        font-family: "AvenirNextDemiBold";
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__description-input-container {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 40px;
+                padding-bottom: 40px;
+                border-bottom: 1px solid $mercury;
+            }
+
+        &__description-input {
+            @include mob__h4-paragraph;
+            height: 143px;
+            border: 1px solid $mercury;
+            border-radius: 4px;
+            background-color: $alabaster;
+            margin-bottom: 0;
+            padding-left: 16px;
+            padding-top: 16px;
+            color: $black;
+            &::placeholder {
+                color: $black;
+            }
+
+            &:focus {
+                border: 2px solid $brainflix-blue;
+                outline: none;
+            }
+        }
+        &__button-box {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: baseline;
+
+        }
+
+        &__button {
+            @include mob__h4-paragraph;
+            font-family: "AvenirNextDemiBold";
+            margin-bottom: 24px;
+            margin-left: 48px;
+            height: 48px;
+            border-radius: 4px;
+            background-color: $brainflix-blue;
+            border: none;
+            color: $white;
+            width: 160px;
+
+            &:hover{
+                border: 2px solid $brainflix-blue-dark;
+                background-color: $brainflix-blue-dark;
+                outline: none;
+            }
+
+            &:focus {
+                border: 2px solid $brainflix-blue-dark;
+                outline: none;
+            }
+
+            &:active {
+                border: 2px solid $brainflix-blue-dark;
+                outline: none;
+            }
+        }
+
+        &__cancel {
+            display: flex;
+            justify-content: center;
+            color: $brainflix-blue;
+        }
+    }
+}
+
+@include desktop {
+    .upload {
+  padding: 48px 12.5vw 0 12.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    display: flex;
+    align-self: flex-start;
+    @include desk__h1;
+    font-family: "AvenirNextBold";
+    margin-bottom: 32px;
+    
+
+  }
+  
+  &__container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      border-top: 1px solid $mercury;
+      padding-top: 40px;
+  }
+
+  &__post {
+      display: flex;
+      flex-direction: column;
+      padding: 24px 0;
+      border-bottom: none;
+  }
+
+  &__post-container {
+    display: flex;
+    flex-direction: column-reverse;
+
+  }
+
+  &__post--create {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-top: 0px;
+      padding-bottom: 24px;
+  }
+  &__vidForm {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+  }
+
+  &__image-title-desc-box{
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+      border-bottom: 1px solid $mercury;
+  }
+
+  &__image-box {
+    @include mob__h5;
+    font-family: "AvenirNextDemiBold";
+    display: flex;
+    flex-direction: column;
+    width: 344px;
+    margin-bottom: 0;
+    margin-right: 24px;
+  }
+
+  &__image {
+    display: flex;
+    height: 183px;
+    width: 344px;
+    border-radius: 4px;
+    z-index: 2;
+  }
+
+
+  &__text-box {
+      display: flex;
+      flex-direction: column;
+      width: 234px;
+  }
+
+  &__title-desc-box{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+  }
+
+  &__description-box {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+  }
+
+  &__header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    
+  }
+  &__vidTitle-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__vidTitle {
+    @include mob__h5;
+    font-family: "AvenirNextDemiBold";
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__vidTitle-input {
+      @include mob__h4-paragraph;
+      height: 48px;
+      border: 1px solid $mercury;
+      border-radius: 4px;
+      background-color: $alabaster;
+      margin-bottom: 24px;
+      padding-left: 16px;
+      color: $black;
+
+      &::placeholder {
+          color: $black;
+      }
+
+      &:focus {
+          border: 2px solid $brainflix-blue;
+          outline: none;
+      }
+
+  }
+
+  &__description {
+      @include mob__h5;
+      font-family: "AvenirNextDemiBold";
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+  }
+
+  &__description-input-container {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+    &__description-input {
+        @include mob__h4-paragraph;
+        height: 94px;
+        border: 1px solid $mercury;
+        border-radius: 4px;
+        background-color: $alabaster;
+        margin-bottom: 0;
+        padding-left: 16px;
+        padding-top: 16px;
+        color: $black;
+        &::placeholder {
+            color: $black;
+        }
+
+        &:focus {
+            border: 2px solid $brainflix-blue;
+            outline: none;
+        }
+    }
+    &__button-box {
+        @include mob__h4-paragraph;
+        font-family: "AvenirNextDemiBold";
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: baseline;
+
+    }
+
+    &__button {
+        @include mob__h4-paragraph;
+        font-family: "AvenirNextDemiBold";
+        margin-bottom: 24px;
+        margin-left: 48px;
+        height: 48px;
+        border-radius: 4px;
+        background-color: $brainflix-blue;
+        border: none;
+        color: $white;
+        width: 160px;
+
+        &:hover{
+            border: 2px solid $brainflix-blue-dark;
+            background-color: $brainflix-blue-dark;
+            outline: none;
+        }
+
+        &:focus {
+            border: 2px solid $brainflix-blue-dark;
+            outline: none;
+        }
+
+        &:active {
+            border: 2px solid $brainflix-blue-dark;
+            outline: none;
+        }
+    }
+
+    &__cancel {
+        display: flex;
+        justify-content: center;
+        color: $brainflix-blue;
+    }
+}
+}
