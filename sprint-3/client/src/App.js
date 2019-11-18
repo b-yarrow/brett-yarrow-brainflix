@@ -33,7 +33,6 @@ import volumeIcon from './assets/images/icons/SVG/Icon-volume.svg'
 import uploadIcon from './assets/images/icons/SVG/Icon-upload.svg'
 import searchIcon from './assets/images/icons/SVG/Icon-search.svg'
 
-
 const apiString = '?api_key=0b33844c-e41d-4ee8-a9cc-e0dde9c37a54';
 
 class App extends Component {
@@ -81,7 +80,7 @@ class App extends Component {
         this.setState({
           mainVideo: response.data
         });
-      })
+      });
   }
 
   render() {
