@@ -83,6 +83,14 @@ class App extends Component {
       });
   }
 
+  uploadVid = (event) => {
+    event.preventDefault();
+    console.log('im in the uploadVid handler')
+    console.log(event.target)
+    console.log(event.target.uploadTitle.value)
+    console.log(event.target.uploadDescription.value)
+  }
+
   render() {
 
     return (
@@ -122,7 +130,14 @@ class App extends Component {
               </>
             }
           />
-          <Route path="/upload" component={Upload} />
+          <Route
+            path="/upload"
+            render={props =>
+              <>
+                <Upload uploadVid={this.uploadVid} />
+              </>
+            }
+          />
         </Switch>
 
       </div>
