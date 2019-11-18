@@ -72,7 +72,7 @@ router.post("/", (req, res) => {
     if (!newVideo.title || !newVideo.description) {
         console.log('failure')
         return res.status(400).json({
-            errorMessage: "Please provide title and description for new video"
+            "errorMessage": "Please provide title and description for new video"
         });
     }
     videos.push(newVideo);

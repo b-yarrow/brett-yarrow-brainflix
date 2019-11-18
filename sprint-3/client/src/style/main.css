@@ -368,10 +368,19 @@
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #000000;
 }
 
 .video__element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 183px;
   width: 320px;
   -o-object-fit: cover;
@@ -385,7 +394,7 @@
   position: absolute;
   padding: 0 16px;
   bottom: 8px;
-  width: 100%;
+  width: 320px;
 }
 
 .video__buttons {

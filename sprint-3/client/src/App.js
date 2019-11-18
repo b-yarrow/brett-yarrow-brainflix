@@ -94,6 +94,13 @@ class App extends Component {
     }
     axios.post(newUrl, newVid).then(response => {
       console.log('Video Upload Successful!')
+      console.log(response.data)
+      this.setState({
+        videoList: [...this.state.videoList, response.data]
+      })
+    }).catch(error => {
+      alert(error.response.data.errorMessage)
+      console.log('failed to upload')
     })
     event.target.reset();
   }
