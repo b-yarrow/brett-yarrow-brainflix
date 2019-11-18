@@ -2,7 +2,6 @@ import React from 'react';
 import picUpload from '../assets/images/Upload-video-preview.jpg'
 
 export default function Upload(props) {
-    console.log(props)
     return (
         <section className="upload">
             <h1 className="upload__title">Upload Video</h1>
