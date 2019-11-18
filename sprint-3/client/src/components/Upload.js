@@ -1,13 +1,14 @@
 import React from 'react';
 import picUpload from '../assets/images/Upload-video-preview.jpg'
 
-export default function Upload() {
+export default function Upload(props) {
+    console.log(props)
     return (
         <section className="upload">
             <h1 className="upload__title">Upload Video</h1>
             <div className="upload__container">
                 <div className="upload__post upload__post--create">
-                    <form className="upload__vidForm" id="commentForm">
+                    <form className="upload__vidForm" id="uploadForm" onSubmit={props.uploadVid}>
                         <div className="upload__image-title-desc-box">
                             <div className="upload__image-box">
                                 <label>VIDEO THUMBNAIL</label>
@@ -16,14 +17,14 @@ export default function Upload() {
                             </div>
                             <div className="upload__title-desc-box">
                                 <div className="upload__vidTitle">
-                                    <label for="ftitle">TITLE YOUR VIDEO</label>
-                                    <input class="upload__vidTitle-input" type="text" name="uploadName" id="ftitle"
+                                    <label htmlFor="ftitle">TITLE YOUR VIDEO</label>
+                                    <input className="upload__vidTitle-input" type="text" name="uploadTitle" id="ftitle"
                                         placeholder="Add a title to your video" />
                                 </div>
                                 <div className="upload__description">
                                     <div className="upload__description-input-container">
                                         <label htmlFor="fcomment">ADD A VIDEO DESCRIPTION</label>
-                                        <textarea className="upload__description-input" name="commentText" id="fcomment" cols="5" rows="5" placeholder="Add a description of your video"></textarea>
+                                        <textarea className="upload__description-input" name="uploadDescription" id="fcomment" cols="5" rows="5" placeholder="Add a description of your video"></textarea>
                                     </div>
                                 </div>
                             </div>

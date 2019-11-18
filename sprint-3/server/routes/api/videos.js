@@ -28,4 +28,23 @@ router.get("/:id", (req, res) => {
     }
 });
 
+//  Create new Video
+router.post("/", (req, res) => {
+    const newVideo = {
+        id: helper.getNewId(videos),
+        title: req.body.title,
+        description: req.body.description,
+        image: req.body.image
+    };
+    if (!newVideo.title || !newVideo.description || !newVideo.image) {
+        return res.status(400).json({
+            errorMessage: "Please provide title, description and image for new video"
+        });
+    }
+    videos.push(newVideo);
+    // console.log(JSON.stringify(students));
+    helper.writeJSONFile(fileName, videos);
+    res.json(videos);
+});
+
 module.exports = router;
