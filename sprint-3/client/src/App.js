@@ -86,11 +86,6 @@ class App extends Component {
 
   uploadVid = (event) => {
     event.preventDefault();
-    console.log('im in the uploadVid handler')
-    console.log(event.target)
-    console.log(event.target.uploadTitle.value)
-    console.log(event.target.uploadDescription.value)
-    console.log(event.target.uploadImage.src)
     const newVid = {
       title: event.target.uploadTitle.value,
       channel: "Brett Yarrow",
