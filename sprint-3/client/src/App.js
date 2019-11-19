@@ -93,15 +93,35 @@ class App extends Component {
       description: event.target.uploadDescription.value
     }
     axios.post(newUrl, newVid).then(response => {
-      console.log('Video Upload Successful!')
-      console.log(response.data)
       this.setState({
         videoList: [...this.state.videoList, response.data]
       })
     }).catch(error => {
       alert(error.response.data.errorMessage)
-      console.log('failed to upload')
     })
+    event.target.reset();
+  }
+
+  postComment = (event) => {
+    event.preventDefault();
+    const newComment = {
+      name: 'Brett Yarrow',
+      comment: event.target.commentText.value
+    }
+    axios.post(newUrl + this.state.mainVideo.id + '/comments', newComment)
+      .then(response => {
+
+        let array = [response.data[0], ...this.state.mainVideo.comments]
+        this.setState({
+          mainVideo: {
+            ...this.state.mainVideo,
+            comments: array
+          }
+        })
+
+      }).catch(error => {
+        alert(error.response.data.errorMessage)
+      });
     event.target.reset();
   }
 
@@ -120,7 +140,7 @@ class App extends Component {
                   <div className='bottom__container'>
                     <div className='bottom__info-comments'>
                       <VideoInfo video={this.state.mainVideo} icons={this.state.icons} />
-                      <Comments comments={this.state.mainVideo.comments} profPic={this.state.profPic} picBlank={this.state.picBlank} />
+                      <Comments comments={this.state.mainVideo.comments} profPic={this.state.profPic} picBlank={this.state.picBlank} postComment={this.postComment} />
                     </div>
                     <VideoQueue videoList={this.state.videoList} current={this.state.mainVideo.id} />
 
@@ -137,7 +157,7 @@ class App extends Component {
                 <div className='bottom__container'>
                   <div className='bottom__info-comments'>
                     <VideoInfo video={this.state.mainVideo} icons={this.state.icons} />
-                    <Comments comments={this.state.mainVideo.comments} profPic={this.state.profPic} picBlank={this.state.picBlank} />
+                    <Comments comments={this.state.mainVideo.comments} profPic={this.state.profPic} picBlank={this.state.picBlank} postComment={this.postComment} />
                   </div>
                   <VideoQueue videoList={this.state.videoList} current={this.state.mainVideo.id} />
                 </div>

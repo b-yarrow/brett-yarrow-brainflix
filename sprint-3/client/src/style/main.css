@@ -1083,18 +1083,18 @@
 }
 
 .comments__button:hover {
-  border: 2px solid #323232;
-  background-color: #000000;
+  border: 2px solid #0065ad;
+  background-color: #0065ad;
   outline: none;
 }
 
 .comments__button:focus {
-  border: 2px solid #323232;
+  border: 2px solid #0065ad;
   outline: none;
 }
 
 .comments__button:active {
-  border: 2px solid #323232;
+  border: 2px solid #0065ad;
   outline: none;
 }
 

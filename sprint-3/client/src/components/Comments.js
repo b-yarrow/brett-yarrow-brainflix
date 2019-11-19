@@ -45,7 +45,7 @@ export default function Comments(props) {
                         <img name="commentImage" className="comments__image comments__image--create"
                             src={props.profPic} alt="profile-avatar"></img>
                     </div>
-                    <form className="comments__name--create" id="commentForm">
+                    <form className="comments__name--create" id="commentForm" onSubmit={props.postComment}>
                         <div className="comments__text-box comments__text-box--create">
                             <div className="comments__comment comments__comment--create">
                                 <div className="comments__comment-input-container">

@@ -169,18 +169,18 @@
         color: $white;
 
         &:hover{
-            border: 2px solid $black;
-            background-color: #000000;
+            border: 2px solid $brainflix-blue-dark;
+            background-color: $brainflix-blue-dark;
             outline: none;
         }
 
         &:focus {
-            border: 2px solid $black;
+            border: 2px solid $brainflix-blue-dark;
             outline: none;
         }
 
         &:active {
-            border: 2px solid $black;
+            border: 2px solid $brainflix-blue-dark;
             outline: none;
         }
     }
