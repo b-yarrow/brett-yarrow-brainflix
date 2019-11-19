@@ -368,10 +368,19 @@
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #000000;
 }
 
 .video__element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 183px;
   width: 320px;
   -o-object-fit: cover;
@@ -385,7 +394,7 @@
   position: absolute;
   padding: 0 16px;
   bottom: 8px;
-  width: 100%;
+  width: 320px;
 }
 
 .video__buttons {
@@ -1074,18 +1083,18 @@
 }
 
 .comments__button:hover {
-  border: 2px solid #323232;
-  background-color: #000000;
+  border: 2px solid #0065ad;
+  background-color: #0065ad;
   outline: none;
 }
 
 .comments__button:focus {
-  border: 2px solid #323232;
+  border: 2px solid #0065ad;
   outline: none;
 }
 
 .comments__button:active {
-  border: 2px solid #323232;
+  border: 2px solid #0065ad;
   outline: none;
 }
 

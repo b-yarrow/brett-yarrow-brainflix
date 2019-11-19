@@ -2,10 +2,13 @@
     &__player-box {
         display: flex;
         position: relative;
+        justify-content: center;
         background-color: #000000;
     }
 
     &__element {
+        display: flex;
+        justify-content: center;
         height: 183px;
         width: 320px;
         object-fit: cover;
@@ -16,7 +19,7 @@
         position: absolute;
         padding: 0 16px;
         bottom: 8px;
-        width: 100%;
+        width: 320px;
     }
         
     &__buttons {

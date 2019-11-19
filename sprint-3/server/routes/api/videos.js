@@ -72,7 +72,7 @@ router.post("/", (req, res) => {
     if (!newVideo.title || !newVideo.description) {
         console.log('failure')
         return res.status(400).json({
-            errorMessage: "Please provide title and description for new video"
+            "errorMessage": "Please provide title and description for new video"
         });
     }
     videos.push(newVideo);
@@ -80,5 +80,41 @@ router.post("/", (req, res) => {
     helper.writeJSONFile(fileName, videos);
     return res.status(201).json(newVideo);
 });
+
+
+//  Create new Comment
+router.post("/:id/comments", (req, res) => {
+    // console.log(req.body)
+
+    // res.send(req.params.id);
+    const found = videos.some(video => video.id === req.params.id);
+    if (found) {
+        // res.json(Object(videos.filter(video => video.id === req.params.id)));
+        // res.json(videos.find(video => video.id === req.params.id));
+        if (req.body.comment) {
+            const newComment = {
+                name: req.body.name,
+                comment: req.body.comment,
+                id: helper.getNewId(videos),
+                likes: 0,
+                timestamp: new Date().getTime()
+            }
+            // videos.find(video => video.id === req.params.id).comments.push(newComment);
+            console.log(newComment)
+            console.log(videos.find(video => video.id === req.params.id).comments);
+            const commentList = videos.find(video => video.id === req.params.id).comments
+            videos.find(video => video.id === req.params.id).comments.unshift(newComment);
+            helper.writeJSONFile(fileName, videos);
+            return res.status(201).json(commentList);
+        } else {
+            return res.status(400).json({ errorMessage: 'Please enter a comment' });
+        }
+    } else {
+        return res
+            .status(400)
+            .json({ errorMessage: `Video with ID:${req.params.id} not found` });
+    }
+});
+
 
 module.exports = router;
